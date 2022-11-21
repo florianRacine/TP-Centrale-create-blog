@@ -1,0 +1,16 @@
+{% extends 'animalerie/base.html' %}
+
+{% block content %}
+<table align="center" size=40>
+    <tr> <th>Nom :</th> <th>Etat :</th> <th>Lieu :</th> </tr>
+    <tbody>
+        {% for animal in animals %}
+        <tr>
+            <td><strong> {{ animal.id_animal }}</strong> </td>
+            <td>{{ animal.etat }}</td>
+            <td>{{ animal.lieu}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
